@@ -1,5 +1,5 @@
 pipeline {
-  agent {label "macos"}
+  agent {
    stages{
     stage('Hello') {
      steps {
@@ -7,5 +7,6 @@ pipeline {
         }
      }
    }
+  }
 }
 
