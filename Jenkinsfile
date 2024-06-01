@@ -6,16 +6,17 @@ pipeline {
         echo "hello from Jenkinsfile"
         }
      }
-
      stage('for the fix brach') {
         when {
           branch "fix-*"
         }
         steps {
-          sh ''' cat README.md '''
+          sh 
+          ''' 
+          cat README.md 
+          '''
         }
      }
-
      stage ('for the PR') {
         when {
           branch 'PR-*'
@@ -24,7 +25,6 @@ pipeline {
           echo 'this only runs for the PRs'
         }
      }
-
    }
 }
 
